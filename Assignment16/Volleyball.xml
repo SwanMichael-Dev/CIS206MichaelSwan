@@ -1,0 +1,106 @@
+<!-- XML Representation for GUI Design -->
+<GUI>
+  <AssistantCoach>
+    <Attributes>
+      <Attribute name="assistantcoachID" type="string" description="Assistant Coach ID" />
+    </Attributes>
+    <Methods>
+      <Method name="managePlayers" description="Manage Players" />
+      <Method name="scheduleMatch" description="Schedule Match" />
+      <Method name="manageTeam" description="Manage Team" />
+    </Methods>
+  </AssistantCoach>
+
+  <Match>
+    <Attributes>
+      <Attribute name="matchID" type="int" description="Match ID" />
+      <Attribute name="teamA" type="Team" description="Team A" />
+      <Attribute name="teamB" type="Team" description="Team B" />
+      <Attribute name="date" type="Date" description="Match Date" />
+      <Attribute name="scoreA" type="int" description="Score A" />
+      <Attribute name="scoreB" type="int" description="Score B" />
+    </Attributes>
+    <Methods>
+      <Method name="recordScore" description="Record Score" />
+      <Method name="scheduleMatch" description="Schedule Match" />
+      <Method name="updateMatchStatus" description="Update Match Status" />
+    </Methods>
+  </Match>
+
+  <Coach>
+    <Attributes>
+      <Attribute name="coachID" type="int" description="Coach ID" />
+      <Attribute name="name" type="string" description="Name" />
+      <Attribute name="experienceYears" type="int" description="Years of Experience" />
+    </Attributes>
+    <Methods>
+      <Method name="trainPlayers" description="Train Players" />
+      <Method name="manageTeam" description="Manage Team" />
+    </Methods>
+  </Coach>
+
+  <Administrator>
+    <Attributes>
+      <Attribute name="adminID" type="int" description="Administrator ID" />
+      <Attribute name="name" type="string" description="Name" />
+      <Attribute name="accessLevel" type="int" description="Access Level" />
+    </Attributes>
+    <Methods>
+      <Method name="managePlayers" description="Manage Players" />
+      <Method name="manageTeams" description="Manage Teams" />
+      <Method name="recordMatchResults" description="Record Match Results" />
+    </Methods>
+  </Administrator>
+
+  <Team>
+    <Attributes>
+      <Attribute name="teamID" type="int" description="Team ID" />
+      <Attribute name="teamName" type="string" description="Team Name" />
+      <Attribute name="coachID" type="int" description="Coach ID" />
+      <Attribute name="roster" type="Player[]" description="Player Roster" />
+    </Attributes>
+    <Methods>
+      <Method name="addPlayer" description="Add Player" />
+      <Method name="removePlayer" description="Remove Player" />
+      <Method name="playMatch" description="Play Match" />
+    </Methods>
+  </Team>
+
+  <LiberoPlayer>
+    <Attributes>
+      <Attribute name="digsMade" type="int" description="Digs Made" />
+      <Attribute name="receives" type="int" description="Receives" />
+    </Attributes>
+    <Methods>
+      <Method name="makeDig" description="Make Dig" />
+      <Method name="receiveServe" description="Receive Serve" />
+    </Methods>
+  </LiberoPlayer>
+
+  <SetterPlayer>
+    <Attributes>
+      <Attribute name="setsMade" type="int" description="Sets Made" />
+      <Attribute name="assists" type="int" description="Assists" />
+    </Attributes>
+    <Methods>
+      <Method name="setPlay" description="Set Play" />
+      <Method name="recordAssist" description="Record Assist" />
+    </Methods>
+  </SetterPlayer>
+
+  <Player>
+    <Attributes>
+      <Attribute name="playerID" type="int" description="Player ID" />
+      <Attribute name="name" type="string" description="Name" />
+      <Attribute name="age" type="int" description="Age" />
+      <Attribute name="position" type="string" description="Position" />
+      <Attribute name="teamID" type="int" description="Team ID" />
+      <Attribute name="stats" type="object" description="Player Statistics" />
+    </Attributes>
+    <Methods>
+      <Method name="updateStats" description="Update Stats" />
+      <Method name="displayStats" description="Display Stats" />
+      <Method name="joinTeam" description="Join Team" />
+    </Methods>
+  </Player>
+</GUI>
